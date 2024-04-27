@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <script defer src="digimon.js"></script>
+    <script defer src="script.js"></script>
+    <title>Digidex | Vanilla JS</title>
+</head>
+<body onload="populateDigimon">
+    <header class="header">
+        <nav class="'navbar">
+            <ul class="navlinks">
+                <li><a href="index.html">Digidex</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="dex-area">
+        <div class="dex-wrapper">
+            <div class="digi-info">
+                <div class="num-wrapper">
+                    <h1 id="digi-num">0</h1>
+                </div>
+                <div class="name-level-wrapper">
+                    <h1 id="digi-name">Koromon</h1>
+                    <h1 id="digi-level">In-Training</h1>  
+               </div>    
+            </div>
+            <div class="img-frame">
+                <img id="digi-pic" src="imgs/koromon.jpg" alt="">
+            </div>
+            <div class="select-wrapper"> 
+                <div id="back-arrow"><</div>
+                <label for="digi-select">Select a Digimon: </label>
+                <select name="digi-select" id="digi-select">
+                    <option disabled selected value="">Select a digimon</option>  
+                </select>
+                <div id="next-arrow">></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
