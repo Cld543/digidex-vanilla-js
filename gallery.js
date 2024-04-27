@@ -1,5 +1,8 @@
 const gallery = document.getElementById('gallery-wrapper')
 
+
+// Create digimon cards after pulling the data from the 
+// digimon array in digimon.js
 function loadDigimon(digiList) {
     for (let i = 0; i < digiList.length; i++) {
         let digiCard = document.createElement('div')

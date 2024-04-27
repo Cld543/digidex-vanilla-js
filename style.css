@@ -148,7 +148,7 @@ a:active {
     height: 200px;
     box-shadow: 5px 30px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.5s ;
-
+    text-shadow: 2px 2px 0 black;
 }
 
 .digimon-card:hover {
@@ -189,3 +189,44 @@ a:active {
     padding: 1rem;
 }
 
+.searchbar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0 1rem 0;
+}
+
+#searchbar {
+    width: 40%;
+    height: 3rem;
+    border-radius: 25px 0 0 25px;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    font-size: 1.5rem;
+    background: transparent;
+
+}
+
+#criteria-box {
+    height: 3rem;
+    border-radius: 0 25px 25px 0;
+    font-size: 1rem;
+    background-color: var(--header-color);
+    color: var(--light-text);
+    font-weight: 700;
+    padding: 0 0.5rem 0 0.5rem ;
+    text-shadow: 2px 2px 0 black;
+    text-align: center;
+}
+#criteria-box > option {
+    background-color: white;
+    color: black;
+    
+}
+
+.bx {
+    position: relative;
+    float: right;
+    font-size: 2rem;
+    transform: translateX(125%);
+}
