@@ -207,7 +207,7 @@ a:active {
     padding-left: 2.5rem;
     font-size: 1.5rem;
     background: transparent;
-
+    transition: width 0.5s ease-in-out;
 }
 
 #criteria-box {
@@ -220,11 +220,33 @@ a:active {
     padding: 0 0.5rem 0 0.5rem ;
     text-shadow: 2px 2px 0 black;
     text-align: center;
+    z-index: 1;
 }
-#criteria-box > option {
+
+#criteria-box > option, #level-choice > option {
     background-color: white;
-    color: black;   
+    color: black;
+    text-align: left;   
 }
+
+#level-choice {
+    height: 3rem;
+    border-radius: 0 25px 25px 0;
+    font-size: 1rem;
+    background-color: rgb(7, 81, 155);
+    color: var(--light-text);
+    font-weight: 700;
+    padding: 0 0.5rem 0 0.5rem ;
+    text-shadow: 2px 2px 0 black;
+    text-align: right;
+    transition: transform ease-in-out 0.5s;
+    padding-left: 70px;
+    position: relative;
+    z-index: 0;
+    left: -50px;
+    display: none;
+}
+
 
 .bx {
     position: relative;

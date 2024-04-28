@@ -2,6 +2,7 @@ const gallery = document.getElementById('gallery-wrapper')
 const searchbar = document.getElementById('searchbar')
 const criteria = document.getElementById('criteria-box')
 const digiCards = document.getElementsByClassName('digimon-card')
+const levelChoice = document.getElementById('level-choice')
 
 // Create digimon cards after pulling the data from the 
 // digimon array in digimon.js
@@ -60,15 +61,28 @@ searchbar.addEventListener('keyup', () => {
             }
         }
         else if (searchCriteria.toLowerCase() === 'level') {
+            levelChoice.style.display = "block"
             let cardLevel = card.querySelector('.digi-card-level').innerHTML
             if (cardLevel.toLowerCase().includes(searchText.toLowerCase())) {
                 card.style.display = ''
             }
             else {
                 card.style.display = 'none'
-            }
+            } 
         }
       
     }
 
 })
+
+criteria.addEventListener('change', (e => {
+    if (e.target.value == "level") {
+        levelChoice.classList.add('active')
+        levelChoice.style.display = "block"
+    }
+    else {
+        levelChoice.style.display = "none"
+        levelChoice.classList.add('active')
+        levelChoice.value = ''
+    }
+}))
