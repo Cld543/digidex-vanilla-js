@@ -89,12 +89,14 @@ criteria.addEventListener('change', (e) => {
         levelChoice.classList.add('active')
         levelChoice.style.display = "block"
         searchbar.disabled = true;
+        searchbar.value=''
     }
     else {
         levelChoice.style.display = "none"
         levelChoice.classList.add('active')
         levelChoice.value = ''
         searchbar.disabled = false;
+        searchbar.value = ''
 
     }
 })
