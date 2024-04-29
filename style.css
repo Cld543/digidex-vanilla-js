@@ -1,5 +1,5 @@
 :root {
-    --header-color: #068FD5;
+    --header-color: rgb(6, 143, 213);
     --light-text: rgb(255, 255, 240);
 }
 
@@ -47,6 +47,66 @@ a:active {
 .navlinks li {
     cursor: pointer;
 }
+
+#modal-wrapper {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.modal {
+    position:relative;
+    background-color: white;
+    margin: 15% auto;
+    width: 50%;
+    min-width: 550px;
+    border-radius: 16px;
+    border: 1px solid black;
+    animation-name: modal-animation;
+    animation-duration: 0.3s;
+}
+
+@keyframes modal-animation {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+ .modal header {
+    background-color: var(--header-color);
+    color: var(--light-text);
+    padding: 1rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 0 black;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 1px solid black;
+ }
+
+ #modal-close {
+    cursor: pointer;
+    font-size: 2rem;
+ }
+
+ .modal h2 {
+    padding: 1rem;
+    font-size: 2rem;
+ }
+ .modal p {
+    padding: 1rem;
+    font-size: 1.2rem;
+ }
+
+ .modal a {
+    color: blue;
+ }
 
 .dex-area {
     display: flex;
