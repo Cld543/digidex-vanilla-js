@@ -3,6 +3,9 @@ const searchbar = document.getElementById('searchbar')
 const criteria = document.getElementById('criteria-box')
 const digiCards = document.getElementsByClassName('digimon-card')
 const levelChoice = document.getElementById('level-choice')
+const modal = document.getElementById('modal-wrapper')
+const aboutGallery = document.getElementById('gallery-about')
+const closeModal = document.getElementById('modal-close')
 
 // Create digimon cards after pulling the data from the 
 // digimon array in digimon.js
@@ -70,11 +73,7 @@ levelChoice.addEventListener('change', (e) => {
     
     for (let card of digiCards) {
         if (searchCriteria.toLowerCase() === 'level') {
-
-
             let cardLevel = card.querySelector('.digi-card-level').innerHTML.toLowerCase()
-            console.log(chosenLevel)
-            console.log(cardLevel)
             if (cardLevel.toLowerCase().includes(chosenLevel)) {
                 card.style.display = ''
             }
@@ -100,4 +99,12 @@ criteria.addEventListener('change', (e) => {
     }
 })
 
+aboutGallery.addEventListener('click', () => {
+    
+    modal.style.display = "block"
+})
+
+closeModal.addEventListener('click', () => {
+    modal.style.display = "none"
+})
 

@@ -48,7 +48,7 @@ a:active {
     cursor: pointer;
 }
 
-.modal-wrapper {
+#modal-wrapper {
     position: fixed;
     z-index: 2;
     left: 0;
@@ -57,16 +57,25 @@ a:active {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
 .modal {
+    position:relative;
     background-color: white;
     margin: 15% auto;
     width: 50%;
+    min-width: 550px;
     border-radius: 16px;
     border: 1px solid black;
-
+    animation-name: modal-animation;
+    animation-duration: 0.3s;
 }
+
+@keyframes modal-animation {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
  .modal header {
     background-color: var(--header-color);
     color: var(--light-text);

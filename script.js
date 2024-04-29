@@ -6,7 +6,8 @@ const digiImg = document.getElementById('digi-pic')
 const selectBox = document.getElementById('digi-select')
 const backArrow = document.getElementById('back-arrow')
 const nextArrow = document.getElementById('next-arrow')
-
+const about = document.getElementById('about')
+const modal = document.getElementById('modal-wrapper')
 
 function populateDigimon() {
     for (let i = 0; i < digimon.length; i++) {
