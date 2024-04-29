@@ -1,5 +1,11 @@
 const gallery = document.getElementById('gallery-wrapper')
+const searchbar = document.getElementById('searchbar')
+const criteria = document.getElementById('criteria-box')
+const digiCards = document.getElementsByClassName('digimon-card')
+const levelChoice = document.getElementById('level-choice')
 
+// Create digimon cards after pulling the data from the 
+// digimon array in digimon.js
 function loadDigimon(digiList) {
     for (let i = 0; i < digiList.length; i++) {
         let digiCard = document.createElement('div')
@@ -37,5 +43,61 @@ function loadDigimon(digiList) {
         gallery.appendChild(digiCard)
     }
 }
-
 loadDigimon(digimon)
+
+
+searchbar.addEventListener('keyup', () => {
+    let searchText = searchbar.value
+    let searchCriteria = criteria.value
+    
+    for (let card of digiCards) {
+        if (searchCriteria.toLowerCase() === 'name') {
+            let cardName = card.querySelector('.digi-card-name').innerHTML
+            if (cardName.toLowerCase().includes(searchText.toLowerCase())) {
+                card.style.display = ''
+            }
+            else {
+                card.style.display = 'none'
+            }
+        }     
+    }
+
+})
+
+levelChoice.addEventListener('change', (e) => {
+    let chosenLevel = e.target.value.toLowerCase()
+    let searchCriteria = criteria.value
+    
+    for (let card of digiCards) {
+        if (searchCriteria.toLowerCase() === 'level') {
+
+
+            let cardLevel = card.querySelector('.digi-card-level').innerHTML.toLowerCase()
+            console.log(chosenLevel)
+            console.log(cardLevel)
+            if (cardLevel.toLowerCase().includes(chosenLevel)) {
+                card.style.display = ''
+            }
+            else {
+                card.style.display = 'none'
+            }
+        }     
+    }
+})
+
+criteria.addEventListener('change', (e) => {
+    if (e.target.value == "level") {
+        levelChoice.classList.add('active')
+        levelChoice.style.display = "block"
+        searchbar.disabled = true;
+    }
+    else {
+        levelChoice.style.display = "none"
+        levelChoice.classList.add('active')
+        levelChoice.value = ''
+        searchbar.disabled = false;
+
+    }
+})
+
+
