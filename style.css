@@ -205,11 +205,10 @@ a:active {
     margin: 2rem;
     text-align: center;
     width: 200px;
-    height: fit-content;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    height: 200px;
+    box-shadow: 5px 30px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.5s ;
     text-shadow: 2px 2px 0 black;
-    border-radius: 15px;
 }
 
 .digimon-card:hover {
@@ -229,22 +228,19 @@ a:active {
 
 .digi-card-header {
     border-bottom: 1px solid black;
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    padding-bottom: 0;
 }
 
 .digi-card-level {
     border-radius: 0 0 15px 15px;
     border-top: 1px solid black;
+
 }
 
 .digi-card-num {
     position: relative;
     float: left;
     text-align: center;
-
+    padding-left: .5rem;
 }
 
 .digi-card-pic {
