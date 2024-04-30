@@ -66,6 +66,7 @@ a:active {
     margin: 15% auto;
     width: 50%;
     min-width: 550px;
+    max-width: 600px;
     border-radius: 16px;
     border: 1px solid black;
     animation-name: modal-animation;
