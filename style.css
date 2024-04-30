@@ -205,10 +205,11 @@ a:active {
     margin: 2rem;
     text-align: center;
     width: 200px;
-    height: 200px;
+    height: fit-content;
     box-shadow: 5px 30px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.5s ;
     text-shadow: 2px 2px 0 black;
+    border-radius: 15px;
 }
 
 .digimon-card:hover {
@@ -228,6 +229,8 @@ a:active {
 
 .digi-card-header {
     border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
 }
 
 .digi-card-level {
@@ -240,7 +243,7 @@ a:active {
     position: relative;
     float: left;
     text-align: center;
-    padding-left: .5rem;
+
 }
 
 .digi-card-pic {
