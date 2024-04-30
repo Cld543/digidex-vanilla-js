@@ -231,6 +231,7 @@ a:active {
     border-bottom: 1px solid black;
     display: flex;
     flex-direction: column;
+    padding-bottom: 0;
 }
 
 .digi-card-level {
