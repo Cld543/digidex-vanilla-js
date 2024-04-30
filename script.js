@@ -6,8 +6,10 @@ const digiImg = document.getElementById('digi-pic')
 const selectBox = document.getElementById('digi-select')
 const backArrow = document.getElementById('back-arrow')
 const nextArrow = document.getElementById('next-arrow')
-const about = document.getElementById('about')
+const aboutDex = document.getElementById('dex-about')
 const modal = document.getElementById('modal-wrapper')
+const closeModal = document.getElementById('modal-close')
+
 
 function populateDigimon() {
     for (let i = 0; i < digimon.length; i++) {
@@ -50,6 +52,15 @@ backArrow.addEventListener('click', () => {
     selectBox.value = i
     let nextDigimon = digimon[i]
     updateDisplay(i, nextDigimon.name, nextDigimon.level)
+})
+
+aboutDex.addEventListener('click', () => {
+    
+    modal.style.display = "block"
+})
+
+closeModal.addEventListener('click', () => {
+    modal.style.display = "none"
 })
 
 populateDigimon();
