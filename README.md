@@ -17,3 +17,5 @@ Features:
    - A tiled gallery view of all available digimon
    - hover over an image to enlarge it
    - Use the search bar to narrow the gallery down by name or digimon level
+
+Digimon images and information were obtained from teh Digimon API created by Shadow Smith at https://digimon-api.vercel.app/
