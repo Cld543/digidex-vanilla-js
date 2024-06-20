@@ -1,5 +1,8 @@
 DigiDex - Vanilla JS
 
+Use the link below to view this site:
+https://digidex-vanilla-js.vercel.app/
+
 This site allows the user to view images of Digimon that are stored in a virtual DigiDex. 
 All code is written using Vanilla HTML, CSS, and JavaScript.
 
