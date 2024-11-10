@@ -46,8 +46,8 @@ function loadDigimon(digiList) {
         gallery.appendChild(digiCard)
     }
 }
-loadDigimon(digimon)
 
+loadDigimon(digimon)
 
 searchbar.addEventListener('keyup', () => {
     let searchText = searchbar.value
