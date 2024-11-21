@@ -18,4 +18,4 @@ All code is written using Vanilla HTML, CSS, and JavaScript.
    - hover over an image to enlarge it
    - Use the search bar to narrow the gallery down by name or digimon level
 
-Digimon images and information were obtained from teh Digimon API created by Shadow Smith at https://digimon-api.vercel.app/
+Digimon images and information were obtained from the Digimon API created by Shadow Smith at https://digimon-api.vercel.app/
